@@ -25,7 +25,7 @@ spring:
           uri: lb://car-service
           predicates:
             - Path=/car/**
-          - id: bike-service
+        - id: bike-service
           uri: lb://bike-service
           predicates:
             - Path=/bike/**
