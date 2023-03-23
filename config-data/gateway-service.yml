@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 eureka:
   client:
     fetch-registry: true
@@ -14,7 +15,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enable: true
+          enabled: true
       routes:
         - id: user-service
           uri: lb://user-service
