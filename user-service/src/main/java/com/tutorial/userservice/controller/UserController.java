@@ -112,7 +112,7 @@ public class UserController {
         return new ResponseEntity("El usuario " + userId + " no tiene dinero para motos", HttpStatus.OK);
     }
 
-    public ResponseEntity<Map<String,Object>> fallBackGetAll(@PathVariable("userId") int userId) {
+    private ResponseEntity<Map<String,Object>> fallBackGetAll(@PathVariable("userId") int userId, RuntimeException e) {
         return new ResponseEntity("El usuario " + userId + " no tiene los vehiculos en el taller", HttpStatus.OK);
     }
 }
